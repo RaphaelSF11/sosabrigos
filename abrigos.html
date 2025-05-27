@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Abrigos | Mapa de Abrigos</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #map-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        #map {
+            flex: 1;
+            height: 100%;
+        }
+
+        #sidebar {
+            width: 255px;
+            background: #2c3e50;
+            color: #FFFFFF;
+            padding: 20px;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .shelter-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: white;
+            color: #2c3e50;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .shelter-item:hover {
+            background: #f1f1f1;
+        }
+
+        .shelter-item h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .capacity {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .capacity.high {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .capacity.medium {
+            background: #ffd166;
+            color: #333;
+        }
+
+        .capacity.low {
+            background: #06d6a0;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map-container">
+        <div id="sidebar">
+            <h2>Abrigos Disponíveis</h2>
+            <div id="shelter-list">
+                <!-- Lista de abrigos será preenchida via JavaScript -->
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Seu script -->
+    <script src="map.js"></script>
+</body>
+
+</html>

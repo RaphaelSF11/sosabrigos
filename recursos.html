@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Novo Recurso - SafeHaven</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <a href="/index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+            <h1><i class="fas fa-box-open"></i> Adicionar Novo Recurso</h1>
+        </div>
+
+        <form id="resource-form">
+            <div class="form-group">
+                <label for="resource-type"><i class="fas fa-tag"></i> Tipo de Recurso*</label>
+                <select id="resource-type" required>
+                    <option value="">Selecione o tipo...</option>
+                    <option value="Água">Água (litros)</option>
+                    <option value="Alimentos">Alimentos (kg)</option>
+                    <option value="Medicamentos">Medicamentos (unidades)</option>
+                    <option value="Cobertores">Cobertores</option>
+                    <option value="Roupas">Roupas</option>
+                    <option value="Higiene">Kits de Higiene</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <input type="text" id="custom-resource" placeholder="Especifique o recurso"
+                    style="display: none; margin-top: 8px;">
+            </div>
+
+            <div class="form-group">
+                <label for="resource-quantity"><i class="fas fa-calculator"></i> Quantidade*</label>
+                <input type="number" id="resource-quantity" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resource-shelter"><i class="fas fa-home"></i> Abrigo Destino*</label>
+                <select id="resource-shelter" required>
+                    <option value="">Selecione o abrigo...</option>
+                    <!-- Opções serão preenchidas via JavaScript -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="resource-donor"><i class="fas fa-user"></i> Doador (opcional)</label>
+                <input type="text" id="resource-donor" placeholder="Nome do doador/organização">
+            </div>
+
+            <div class="form-group">
+                <label for="resource-expiry"><i class="fas fa-calendar-check"></i> Validade (se aplicável)</label>
+                <input type="date" id="resource-expiry">
+            </div>
+
+            <div class="form-group">
+                <label for="resource-notes"><i class="fas fa-edit"></i> Observações</label>
+                <textarea id="resource-notes" rows="3" placeholder="Detalhes sobre o recurso..."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="reset" class="btn secondary">
+                    <i class="fas fa-eraser"></i> Limpar
+                </button>
+                <button type="submit" class="btn primary">
+                    <i class="fas fa-save"></i> Salvar Recurso
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="resource-form.js"></script>
+</body>
+
+</html>

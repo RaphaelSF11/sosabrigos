@@ -179,6 +179,10 @@ body {
     color: #3498db;
     opacity: 0.3;
 }
+.card-logo{
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
 
 /* Tabela de Recursos */
 .resource-table {
@@ -481,6 +485,7 @@ select:invalid {
     color: #3498db;
     text-decoration: none;
     margin-bottom: 15px;
+    
 }
 
 .back-button:hover {
@@ -575,7 +580,7 @@ select:invalid {
 
 /* Estilos para a página de login */
 .login-body {
-    background-color: #f5f7fa;
+    background-color: #1872ad;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -599,7 +604,7 @@ select:invalid {
 }
 
 .logo {
-    max-width: 100px;
+    
     margin-bottom: 15px;
 }
 
@@ -661,6 +666,20 @@ select:invalid {
 
 .login-btn:hover {
     background-color: #2980b9;
+}
+.login-regiter{
+      
+        display: block;
+        margin-bottom: 30px;
+        color: #2980b9;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.login-regiter:hover {
+    color: #2c3e50;
+    transition: 0.5s;
 }
 
 .message {

@@ -25,17 +25,17 @@ const roles = {
     admin: {
         name: "Administrador",
         permissions: ["dashboard", "abrigos", "recursos", "usuarios", "relatorios", "configuracoes"],
-        redirect: "index.html"
+        redirect: "painel.html"
     },
     manager: {
         name: "Gestor",
         permissions: ["dashboard", "abrigos", "recursos"],
-        redirect: "index.html"
+        redirect: "painel.html"
     },
     viewer: {
         name: "Visualizador",
         permissions: ["dashboard"],
-        redirect: "index.html"
+        redirect: "painel.html"
     }
 };
 
@@ -81,6 +81,6 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
 window.addEventListener('DOMContentLoaded', () => {
     const currentUser = sessionStorage.getItem('currentUser');
     if (currentUser) {
-        window.location.href = 'index.html';
+        window.location.href = 'painel.html';
     }
 });
